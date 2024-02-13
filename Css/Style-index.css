@@ -1,14 +1,14 @@
         /* Style de la barre de navigation */
         .navbar {
             overflow: hidden;
-            background-color: grey;
+            background-color: White;
         }
 
         /* Style des liens dans la barre de navigation */
         .navbar a {
             float: left;
             display: block;
-            color: White;
+            color: black;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
@@ -16,7 +16,7 @@
 
         /* Changement de couleur au survol des liens */
         .navbar a:hover {
-            background-color: White;
+            background-color: lightblue;
             color: Black;
         }
 
@@ -31,7 +31,7 @@
             font-size: 16px;
             border: none;
             outline: none;
-            color: White;
+            color: Black;
             padding: 14px 20px;
             background-color: inherit;
             font-family: inherit;
@@ -42,7 +42,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: grey;
+            background-color: White;
             min-width: 160px;
             z-index: 1;
         }
@@ -50,7 +50,7 @@
         /* Style des liens du menu déroulant */
         .dropdown-content a {
             float: none;
-            color: white;
+            color: Black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -59,11 +59,25 @@
 
         /* Changement de couleur au survol des liens du menu déroulant */
         .dropdown-content a:hover {
-            background-color: White;
+            background-color: lightblue;
             color: Black;
         }
 
         /* Afficher le contenu du menu déroulant au survol du bouton */
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          background-image: url('../Images/Ordinateur.jpg'); /* Remplacez "votre_image.jpg" par le chemin de votre image */
+          background-size: 100%;
+          background-attachment: fixed; /* C'est ce qui fixe l'image de fond */
+        }
+    
+        .content {
+          padding: 20px;
+          background-color: rgb(255, 255, 255); /* Fond semi-transparent pour le contenu */
         }
