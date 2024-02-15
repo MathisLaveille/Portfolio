@@ -34,8 +34,31 @@
 <!-- Contenu de la page -->
 
 <div class="content">
-<h1 style="color:Black";>Page de veuille technologique</h1>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1 style="color:Black";>Page de veille technologique</h1>
+
+<?php
+
+// $xml = simplexml_load_file('https://javascript.developpez.com/index/rss');
+$xml = simplexml_load_file('https://www.journalduhacker.net/rss');
+$xml = simplexml_load_file('https://news.humancoders.com/t/java/items/feed');
+
+foreach ($xml -> channel -> item as $item) {
+
+    print("<a href='{$item->link}'>'{$item->title}</a><br/>");
+    print("{$item->pubDate}");
+    print("{$item->description}");
+
+
+    // $enclosureUrl = $item->enclosure[''];
+    // print('<br/><br/>enclosureUrl = "'. $enclosureUrl .'"<br/><br/>');
+
+
+}
+
+?>
+
 </div>
+
 </body>
 </html>
+
