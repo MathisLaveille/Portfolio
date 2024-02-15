@@ -47,6 +47,7 @@ foreach ($xml -> channel -> item as $item) {
     print("<a href='{$item->link}'>'{$item->title}</a><br/>");
     print("{$item->pubDate}");
     print("{$item->description}");
+    print("{$item->pubDate}");
 
 
     // $enclosureUrl = $item->enclosure[''];
