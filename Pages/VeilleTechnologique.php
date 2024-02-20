@@ -38,9 +38,7 @@
 
 <?php
 
-// $xml = simplexml_load_file('https://javascript.developpez.com/index/rss');
-$xml = simplexml_load_file('https://www.journalduhacker.net/rss');
-$xml = simplexml_load_file('https://news.humancoders.com/t/java/items/feed');
+$xml = simplexml_load_file('https://javascript.developpez.com/index/rss');
 
 foreach ($xml -> channel -> item as $item) {
 
@@ -48,6 +46,8 @@ foreach ($xml -> channel -> item as $item) {
     print("{$item->pubDate}");
     print("{$item->description}");
     print("{$item->pubDate}");
+    print("{$item->$date}");
+    print("{$item->$enclosure}");
 
 
     // $enclosureUrl = $item->enclosure[''];
