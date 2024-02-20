@@ -26,7 +26,7 @@
     </div>
     
     <a href="Certification.html">Certification</a>
-    <a href="VeilleTechnologique.html">Veille Technologique</a>
+    <a href="VeilleTechnologique.php">Veille Technologique</a>
 </div>
 
 <br>
