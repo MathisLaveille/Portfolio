@@ -39,30 +39,24 @@
 <h1 style="color:Black";>Page de veille technologique</h1>
 
 <?php
+$xml = simplexml_load_file('https://www.francetvinfo.fr/internet/securite-sur-internet.rss');
 
-$xml = simplexml_load_file('https://javascript.developpez.com/index/rss');
-
-foreach ($xml -> channel -> item as $item) {
-
-    print("<a href='{$item->link}'>'{$item->title}</a><br/>");
-    print("{$item->pubDate}");
-    print("{$item->description}");
-    print("{$item->pubDate}");
-    print("{$item->date}");
-    print("{$item->enclosure}");
-    echo "<br><br><br><br><br>";
-
-
-    // $enclosureUrl = $item->enclosure[''];
-    // print('<br/><br/>enclosureUrl = "'. $enclosureUrl .'"<br/><br/>');
-
-
+if ($xml) {
+    echo '<div class="rss-feed">';
+    foreach ($xml->channel->item as $item) {
+        echo '<div class="rss-item">';
+        echo "<h2><a href='{$item->link}'>{$item->title}</a></h2>";
+        echo "<p class='pub-date'><em>{$item->pubDate}</em></p>";
+        echo "<div class='description'>{$item->description}</div>";
+        echo '</div>';
+    }
+    echo '</div>';
+} else {
+    echo "<p>Erreur lors du chargement du flux RSS.</p>";
 }
-
 ?>
 
 </div>
 
 </body>
 </html>
-
