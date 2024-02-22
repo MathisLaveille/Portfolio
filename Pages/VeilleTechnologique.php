@@ -39,6 +39,9 @@
 <h1 style="color:Black";>Page de veille technologique</h1>
 
 <?php
+//$xml = simplexml_load_file('https://www.francetvinfo.fr/internet/securite-sur-internet.rss');
+$xml = simplexml_load_file('https://www.letemps.ch/cyber.rss');
+$xml = simplexml_load_file('https://www.francetvinfo.fr/internet/securite-sur-internet.rss');
 $xml = simplexml_load_file('https://www.francetvinfo.fr/internet/securite-sur-internet.rss');
 
 if ($xml) {
